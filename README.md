@@ -93,6 +93,12 @@ Generated models:
 - Uses **item-item purchase history correlation** to identify and suggest related products.
 
 ---
+![image](https://github.com/user-attachments/assets/75ecec83-692e-4a31-8ce1-5ff584ba6da9)
+<img width="443" alt="image" src="https://github.com/user-attachments/assets/1f9d944d-c538-456d-8fdd-76056892569e" />
+<img width="523" alt="image" src="https://github.com/user-attachments/assets/4fe3557a-a58d-4d19-abf5-0712359ebf5c" />
+
+
+
 
 ## 🔗 References
 > 📝 **Reference:** This project was inspired by and built upon ideas presented in the following video:  
