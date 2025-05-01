@@ -1,6 +1,8 @@
 
 # 🛒 Product Recommendation System
 
+🚀 **Live Demo**: [Click here to view the deployed app](https://products-recommendation-system-r1sz.onrender.com/)
+
 **Mini Project - B.Tech 3rd Year (2022)**  
 Developed using Machine Learning and Flask  
 By: Bh. Jaya Krishna Sri
