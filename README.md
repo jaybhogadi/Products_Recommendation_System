@@ -1,26 +1,127 @@
-# Product-Recommendation-System
-My Graduate Capstone Project - This is a Product Recommendation System for a Local Wholesaler in India, using Python and Machine Learning 
 
-Dataset :- About two and half years of data used for this project and is uploaded on GitHub (Sales Transactions-2017.csv, Sales Transactions-2018.csv, Sales Transactions-2019.csv)
+# 🛒 Product Recommendation System
 
-Used Flask web framework in Python to publish the results on a web page
+**Mini Project - B.Tech 3rd Year (2022)**  
+Developed using Machine Learning and Flask  
+By: Bh. Jaya Krishna Sri
+Guide: Ms. D. Dakshayani  
 
-Link to the web application :- https://product-recommendation-system.herokuapp.com/
+---
 
-About the Project :- https://youtu.be/0FCxHEc_e8Q (This video provides an understanding about the company and the project)
+## 📌 About the Project
+
+This is a **Product Recommendation System** developed as part of my **B.Tech 3rd year mini project (2022)**.  
+The system uses customer purchase history over 2.5 years to recommend:
+
+- 🔝 **Top 10 most popular products**
+- 👤 **Customer-specific frequently purchased products**
+- 👥 **Personalized product recommendations** based on user similarities
+- 🛍️ **Related product suggestions** using item similarity
 
 
-# Program Files
-PGM-1 - Data_Cleaning.ipynb                  - Performs Data Cleaning to remove the irrelevant data
+## 🧠 Tech Stack
 
-PGM-2 - Product_Ranking.ipynb                - Identifies the Top Selling and Most Popular products
+- Python 3.10.7  
+- Flask (Web framework)  
+- Pandas, NumPy, Scikit-learn  
+- Jupyter Notebook (Google Colab)  
+- Pickle (for model serialization)  
+- HTML/CSS  
+- VS Code (IDE)
 
-PGM-3 - Customer-Product-Ranking.ipynb       - Identifies the products of a Customer, Most frequently purchased and Purchased the Most
+---
 
-PGM-4 - Recommend_Products_to_Customer.ipynb - Identifies the similarities between the customers. This is further used to recommend the products to a Customer, based on the products they purchased and similarities with other Customer purchase pattern
+## 📂 Dataset
 
-PGM-5 - Recommend_Similar_Products.ipynb     - Identifies the similarities between the products. This correlation is further used to identify the similar products for the item being viewed
+Sales transaction data for the years:
+- `Sales Transactions-2017.csv`  
+- `Sales Transactions-2018.csv`  
+- `Sales Transactions-2019.csv`  
 
-These programs create .pkl files (prod_ranking_model.pkl, cust_prod_ranking_model.pkl, cust_correlation_model.pkl, prod_correlation_model.pkl), which are further accessed for publishing data on website
+---
 
-Flask.ipynb   - Python program with different functionalities based on the user action on website, to publish the data on to website
+## 🧾 Program Files
+
+| File | Description |
+|------|-------------|
+| `PGM-1 - Data_Cleaning.ipynb` | Cleans and preprocesses raw sales data |
+| `PGM-2 - Product_Ranking.ipynb` | Identifies top-selling and most popular products |
+| `PGM-3 - Customer-Product-Ranking.ipynb` | Extracts frequently purchased items per customer |
+| `PGM-4 - Recommend_Products_to_Customer.ipynb` | Recommends products using customer-to-customer correlation |
+| `PGM-5 - Recommend_Similar_Products.ipynb` | Suggests similar products based on item-item correlation |
+| `Flask.ipynb` | Integrates all functionalities into a Flask web server |
+
+Generated models:
+- `prod_ranking_model.pkl`
+- `cust_prod_ranking_model.pkl`
+- `cust_correlation_model.pkl`
+- `prod_correlation_model.pkl`
+
+---
+
+## 🧩 Features
+
+### 📌 General Capabilities
+- Predicts **Top 10 popular products**
+- Recommends products based on **individual customer history**
+- Suggests **similar products** to the currently viewed product
+
+### 🔍 Popularity-Based Recommendation (Most Frequently Purchased Items)
+- Products with high number of orders are considered most frequently purchased.
+- To find the most popular items, the system factors in the number of customers as well:
+  
+  **Weighted No_of_Orders (W)** = `O × (C / M)`  
+  - `O` = Number of Orders  
+  - `C` = Number of Customers who purchased the product  
+  - `M` = Maximum number of customers across all products  
+
+---
+
+## 👤 Customer-Based Recommendation
+
+- Shows **most frequently purchased products** for a specific customer.
+- Uses **Spearman correlation** to find similar customers.
+- Recommends products based on **customer-to-customer similarity**.
+
+---
+
+## 🧾 Item-Based Recommendation
+
+- Recommends products that are **frequently bought together**.
+- Uses **item-item purchase history correlation** to identify and suggest related products.
+
+---
+
+## 🔗 References
+> 📝 **Reference:** This project was inspired by and built upon ideas presented in the following video:  
+> 🔗 [About the Project – YouTube](https://youtu.be/0FCxHEc_e8Q)  
+> I have taken reference from this video which provides an understanding of the project, and have made additional changes and enhancements. Full credit goes to the original creator for the concept and initial walkthrough.
+- [Project Overview – YouTube](https://youtu.be/0FCxHEc_e8Q)
+- [Literature Review - ResearchGate](https://www.researchgate.net/publication/353757917_Product_Recommendation_System_A_Systematic_Literature_Review)
+- [Amazon Recommender System Paper](https://www.cs.umd.edu/~samir/498/AmazonRecommendations.pdf)
+- [TDS: EDA Techniques](https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15)
+
+---
+
+## 💡 Future Scope
+
+- Integrate login/authentication
+- Add real-time update support
+- Cloud deployment with Docker or Render
+- Hybrid recommendation: collaborative + content-based
+
+---
+
+## 👨‍💻 Developed By
+
+Team-47  
+- Bh. Jaya Krishna Sri (19071A12C6)  
+- P. Srujana (19071A12G1)  
+- Sk. Afreen (19071A12G8)  
+- G. Shivani (20075A1215)
+
+---
+
+## 📜 License
+
+This project is intended for academic learning and demonstration only.
